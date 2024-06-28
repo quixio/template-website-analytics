@@ -37,6 +37,23 @@ deployments:
       enabled: true
       urlPrefix: website
     variables: []
+  - name: web-api-gateway
+    application: web-api-gateway
+    version: latest
+    deploymentType: Service
+    resources:
+      cpu: 200
+      memory: 500
+      replicas: 1
+    publicAccess:
+      enabled: true
+      urlPrefix: web-api
+    variables:
+      - name: output
+        inputType: OutputTopic
+        description: This is the output topic for hello world data
+        required: true
+        value: website-data
 
 # This section describes the Topics of the data pipeline
 topics:
