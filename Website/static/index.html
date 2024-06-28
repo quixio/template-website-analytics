@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Webpage</title>
+    <script src="/static/script.js"></script>
+    <script src="/static/quix.js"></script>
+    <style>
+        #rectangle {
+            height: 600px;
+            width: 90%;
+            background-color: grey;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello, World!</h1>
+    <p>Click a button the change the color of the box!</p>
+    <button onclick="changeColor('red')">Red</button>
+    <button onclick="changeColor('green')">Green</button>
+    <button onclick="changeColor('blue')">Blue</button>
+    <div id="rectangle"></div>
+</body>
+
+</html>
